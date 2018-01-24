@@ -113,3 +113,15 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+.main-button {
+    background-color: #feedc7;
+    border-color: #0a0a0a;
+    color: #0a0a0a;
+}
+
+.main-button:hover{
+    background-color: #f0dfcd;
+}
+
+

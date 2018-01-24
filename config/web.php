@@ -74,6 +74,7 @@ $config = [
 
             ],
             [
+
                 'allow' => true,
                 'roles' => ['@'],
             ]

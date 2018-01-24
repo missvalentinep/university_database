@@ -40,6 +40,9 @@ class EmployeeController extends Controller
      */
     public function actionIndex()
     {
+        if (Yii::$app->user->getIdentity()->is_admin == 0){
+            $this->redirect('/site/index');
+        }
         $searchModel = new EmployeeSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -57,6 +60,9 @@ class EmployeeController extends Controller
      */
     public function actionView($id)
     {
+        if (Yii::$app->user->getIdentity()->username != $id){
+            $this->redirect('/site/index');
+        }
 
         $employeeActivity = Activity::find()
             ->select('activity.activity_id, activity.comment, activity.start_date, activity.end_date')
@@ -106,6 +112,10 @@ class EmployeeController extends Controller
      */
     public function actionUpdate($id)
     {
+        if (Yii::$app->user->getIdentity()->username != $id){
+            $this->redirect('/site/index');
+        }
+
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -128,6 +138,7 @@ class EmployeeController extends Controller
      */
     public function actionDelete($id)
     {
+
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

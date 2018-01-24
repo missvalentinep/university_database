@@ -27,16 +27,16 @@ $this->title = 'My Yii Application';
 
         <div class="row">
             <div class="col-lg-4">
-                <p><a class="btn btn-lg btn-success" href="/published-work">Добавить печатную работу</a></p>
+                <p><a class="btn btn-lg main-button" href="/published-work">Добавить печатную работу</a></p>
                 <p>Добавить информацию о печатной работе - УМК, учебнике, публикации, диссертации и т.д.</p>
             </div>
             <div class="col-lg-4">
-                <p><a class="btn btn-lg btn-success" href="/activity">Добавить орг. деятельность</a></p>
+                <p><a class="btn btn-lg main-button" href="/activity">Добавить орг. деятельность</a></p>
                 <p>Добавить информацию о деятельности - руководству чем\кем-либо, оппонированию, организации мероприятий и т.д..</p>
             </div>
 
             <div class="col-lg-4">
-                <p><a class="btn btn-lg btn-success" href="/employee/view?id=<?php echo Yii::$app->user->identity->username ?>">Посмотреть профиль</a></p>
+                <p><a class="btn btn-lg main-button" href="/employee/view?id=<?php echo Yii::$app->user->identity->username ?>">Посмотреть профиль</a></p>
                 <p>Посмотреть информацию о своем профиле</p>
             </div>
         </div>
